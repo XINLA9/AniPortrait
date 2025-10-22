@@ -6,12 +6,11 @@ a2m_model:
   from_pretrained: True
 
 a2p_model:
-  out_dim: 6
+  out_dim: 6 
   latent_dim: 512
   model_path: ./pretrained_model/wav2vec2-base-960h
   only_last_fetures: True
   from_pretrained: True
-  max_audio_frames: 630
 
 pretrained_model:
   a2m_ckpt: ./pretrained_model/audio2mesh.pt
