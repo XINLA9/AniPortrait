@@ -89,15 +89,19 @@ Video Source: [鹿火CAVY from bilibili](https://www.bilibili.com/video/BV1H4421
 
 ### Build environment
 
-We recommend a python version >=3.10 and cuda version =11.7. Then build environment as follows:
-
+We recommend a python version >=3.10 and cuda version =11.8. Then build environment as follows:
+```shell
+conda create -n ani python=3.10
+conda activate ani
+pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118
+```
 ```shell
 pip install -r requirements.txt
 ```
 
 ### Download weights
 
-All the weights should be placed under the `./pretrained_weights` direcotry. You can download weights manually as follows:
+All the weights should be placed under the `./pretrained_model` direcotry. You can download weights manually as follows:
 
 1. Download our trained [weights](https://huggingface.co/ZJYang/AniPortrait/tree/main), which include the following parts: `denoising_unet.pth`, `reference_unet.pth`, `pose_guider.pth`, `motion_module.pth`, `audio2mesh.pt`, `audio2pose.pt` and `film_net_fp16.pt`. You can also download from [wisemodel](https://wisemodel.cn/models/zjyang8510/AniPortrait).
 
@@ -110,7 +114,7 @@ All the weights should be placed under the `./pretrained_weights` direcotry. You
 Finally, these weights should be orgnized as follows:
 
 ```text
-./pretrained_weights/
+./pretrained_model/
 |-- image_encoder
 |   |-- config.json
 |   `-- pytorch_model.bin
