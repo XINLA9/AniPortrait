@@ -12,10 +12,14 @@ inference_config: "./configs/inference/inference_v2.yaml"
 weight_dtype: 'fp16'
 
 # path of your custom head pose template
-pose_temp: "./configs/inference/head_pose_temp/pose.npy"
+pose_temp: "./configs/inference/head_pose_temp/lyf.npy"
 
 test_cases:
 #  "./configs/inference/ref_images/lyl.png":
 #    - "./configs/inference/audio/lyl.wav"
-  "./input/picture/1/index.png":
-    - "./input/audio/1/index.wav"
+
+#  "./input/1/index.png":
+#    - "./input/1/index.wav"
+
+  "./input/m3/index_small.png":
+    - "./input/m3/result.wav"
